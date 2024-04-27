@@ -1,0 +1,20 @@
+<!-- submit_feedback.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback</title>
+</head>
+<body>
+{% block body %}
+    <h1>Submit Feedback</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="message" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
+</body>
+</html>
